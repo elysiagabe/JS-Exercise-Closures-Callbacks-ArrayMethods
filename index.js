@@ -264,9 +264,9 @@ function tallyUpDonations(runners) {
 */
 function counterMaker() {
   // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count
+  let count = -1;
+  return function counter() {
+    return ++count
   }
   // BROKEN CODE ENDS
 }
