@@ -291,8 +291,15 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit() {
+  let count = -1;
+  return function counter() {
+    if (count < 3) {
+      return ++count;
+    } else {
+      return count = 0;
+    }
+  }
 }
 
 /////////////// END OF CHALLENGE ///////////////
