@@ -160,7 +160,7 @@ function processContains(item, list, callback) {
  * should return 3.
 */
 function processDuplicateFree(list, callback) {
-  const deDuped = Array.from(new Set(list));
+  const deDuped = Array.from(new Set(list)); //creates a new Set object & turns that back into an array with Array.from
   return callback(deDuped);
 }
 
@@ -292,10 +292,10 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit() {
+function counterMakerWithLimit(max) {
   let count = -1;
   return function counter() {
-    if (count < 3) {
+    if (count < max) {
       return ++count;
     } else {
       return count = 0;
